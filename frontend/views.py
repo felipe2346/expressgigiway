@@ -40,6 +40,21 @@ def about(request):
     return render(request, 'frontend/about.html')
 
 
+def loginUser(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('account:dashboard')    
+        else:
+            messages.info(request, 'Username or Password is incorrect')
+    return render(request, 'frontend/login.html')
+
+
 @login_required()
 def logoutUser(request):
 	logout(request)
