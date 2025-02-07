@@ -17,6 +17,8 @@
 <!--==================================================-->
 <!-- Start Prygo Breadcumb Area -->
 <!--==================================================-->
+{% if shipments %}
+{% else %}
 <div class="breadcumb-area">
 	<div class="container">
 		<div class="row">
@@ -48,6 +50,7 @@
 		</div>
 	</div>
 </div>
+{% endif %}
 <!--==================================================-->
 <!-- End Prygo Breadcumb Area -->
 <!--==================================================-->
@@ -57,8 +60,8 @@
 <!-- Start track result Area -->
 <!--==================================================-->
 {% if shipments %}
-<section id="tracking_result">
-    <div class="container">
+<section id="tracking_result ">
+    <div class="container py-3 py-md-5 mt-2 mt-md-5">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-10">
                 <div class="card shadow">

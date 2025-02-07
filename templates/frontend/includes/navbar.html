@@ -1,5 +1,11 @@
 {% load static %}
 
+<style>
+	.exgigi_logome{
+		width: 240px;
+	}
+</style>
+
 <!--==================================================-->
 <!-- Start Prygo Header Top Area -->
 <!--==================================================-->
@@ -56,10 +62,11 @@
 			<div class="col-lg-2">
 				<div class="logo">
 					<a class="logo_img" href="{% url 'frontend:home' %}" title="expressgigi">
-						<img src="{% static 'frontend/assets/images/logo.png' %}" alt="">
+						<img src="{% static 'frontend/assets/images/exgigi_logo.png' %}" alt="" class="exgigi_logome">
 					</a>
 					<a class="main_sticky" href="{% url 'frontend:home' %}" title="expressgigi">
-						<img src="{% static 'frontend/assets/images/logo.png' %}" alt="astute">
+						<img src="{% static 'frontend/assets/images/exgigi_logo.png' %}" alt="astute" class="exgigi_logome">
+						<!-- <img src="{% static 'frontend/assets/images/logo.png' %}" alt="astute"> -->
 					</a>
 				</div>
 			</div>
